@@ -13,8 +13,9 @@ documentation = "https://docs.rs/atomic_float"
 homepage = "https://github.com/thomcc/atomic_float"
 
 [features]
-default = ["atomic_f64"]
-atomic_f64 = []
+default = ["atomic_f64", "serde"]
+atomic_f64 = [ "atomic-traits" ]
 
 [dependencies]
 serde = { version = "1", optional = true }
+atomic-traits = { version = "0.3.0", optional = true }
